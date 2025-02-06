@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formación en Contabilidad - LUTOPSA</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #e63946;
+            --secondary: #1d3557;
+            --accent: #2a9d8f;
+            --light: #f1faee;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(rgba(29, 53, 87, 0.9), rgba(41, 157, 143, 0.8)),
+                url('https://static.vecteezy.com/system/resources/previews/016/828/094/non_2x/topographic-map-abstract-background-with-lines-and-circles-mountain-contour-lines-in-gold-terrain-topographic-map-black-and-gold-free-vector.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            color: var(--light);
+            line-height: 1.6;
+        }
+
+        .training-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: rgba(29, 53, 87, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .training-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .training-title {
+            font-size: 2.5rem;
+            color: var(--accent);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .module-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .module-card {
+            background: rgba(241, 250, 238, 0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 2px solid var(--accent);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .module-card:hover {
+            transform: translateY(-5px);
+            background: rgba(241, 250, 238, 0.15);
+        }
+
+        .module-number {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .module-title {
+            font-size: 1.5rem;
+            color: var(--light);
+            margin-bottom: 1rem;
+        }
+
+        .module-content {
+            color: #ccc;
+            margin-bottom: 1.5rem;
+        }
+
+        .checklist {
+            list-style: none;
+            padding: 0;
+        }
+
+        .checklist li {
+            margin-bottom: 0.8rem;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .checklist li:before {
+            content: "\f058";
+            font-family: "Font Awesome 5 Free";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 10px;
+            background: rgba(241, 250, 238, 0.2);
+            border-radius: 5px;
+            margin: 2rem 0;
+        }
+
+        .progress-fill {
+            width: 25%;
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            border-radius: 5px;
+            transition: width 0.5s ease;
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 10px 25px;
+            background: var(--primary);
+            color: white;
+            border-radius: 30px;
+            text-decoration: none;
+            margin-top: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .back-button:hover {
+            background: var(--secondary);
+            transform: translateY(-2px);
+        }
+
+        /* Estilos para la sección de preguntas */
+        .quiz-section {
+            margin-top: 3rem;
+            padding: 2rem;
+            background: rgba(241, 250, 238, 0.1);
+            border-radius: 15px;
+            border: 2px solid var(--accent);
+        }
+
+        .quiz-section h2 {
+            text-align: center;
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+        }
+
+        .quiz-question {
+            margin-bottom: 1.5rem;
+        }
+
+        .quiz-question p {
+            margin-bottom: 0.5rem;
+        }
+
+        .quiz-question label {
+            display: block;
+            margin-bottom: 0.3rem;
+        }
+
+        .quiz-section textarea {
+            width: 100%;
+            border-radius: 5px;
+            border: none;
+            padding: 0.5rem;
+            resize: vertical;
+        }
+
+        .quiz-section button {
+            display: block;
+            margin: 0 auto;
+            padding: 10px 25px;
+            background: var(--accent);
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .quiz-section button:hover {
+            background: var(--primary);
+        }
+
+        @media (max-width: 768px) {
+            .training-container {
+                margin: 1rem;
+                padding: 1rem;
+            }
+
+            .training-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="training-container">
+        <div class="training-header">
+            <h1 class="training-title"><i class="fas fa-calculator"></i> Formación en Contabilidad</h1>
+            <p class="module-content">Programa de capacitación inicial para nuevos colaboradores</p>
+            <div class="progress-bar">
+                <div class="progress-fill"></div>
+            </div>
+        </div>
+
+        <div class="module-grid">
+            <!-- Módulo 1 -->
+            <div class="module-card">
+                <div class="module-number">Módulo 1</div>
+                <h3 class="module-title">Introducción a la Contabilidad</h3>
+                <ul class="checklist">
+                    <li>Principios contables fundamentales</li>
+                    <li>Estructura organizacional</li>
+                    <li>Software corporativo</li>
+                </ul>
+            </div>
+
+            <!-- Módulo 2 -->
+            <div class="module-card">
+                <div class="module-number">Módulo 2</div>
+                <h3 class="module-title">Sistema Contable LUTOPSA</h3>
+                <ul class="checklist">
+                    <li>Configuración de cuentas</li>
+                    <li>Procesos de facturación</li>
+                    <li>Conciliación bancaria</li>
+                </ul>
+            </div>
+
+            <!-- Módulo 3 -->
+            <div class="module-card">
+                <div class="module-number">Módulo 3</div>
+                <h3 class="module-title">Normativas Corporativas</h3>
+                <ul class="checklist">
+                    <li>Políticas de gastos</li>
+                    <li>Procedimientos de auditoría</li>
+                    <li>Cumplimiento legal</li>
+                </ul>
+            </div>
+
+            <!-- Módulo 4 -->
+            <div class="module-card">
+                <div class="module-number">Módulo 4</div>
+                <h3 class="module-title">Flujo de Trabajo</h3>
+                <ul class="checklist">
+                    <li>Ciclo contable mensual</li>
+                    <li>Reportes financieros</li>
+                    <li>Coordinación interdepartamental</li>
+                </ul>
+            </div>
+
+            <!-- Módulo 5 -->
+            <div class="module-card">
+                <div class="module-number">Módulo 5</div>
+                <h3 class="module-title">Ética Profesional</h3>
+                <ul class="checklist">
+                    <li>Confidencialidad de datos</li>
+                    <li>Prevención de fraudes</li>
+                    <li>Compliance financiero</li>
+                </ul>
+            </div>
+
+            <!-- Módulo 6 -->
+            <div class="module-card">
+                <div class="module-number">Módulo 6</div>
+                <h3 class="module-title">Casos Prácticos</h3>
+                <ul class="checklist">
+                    <li>Simulación de cierre contable</li>
+                    <li>Resolución de incidencias</li>
+                    <li>Análisis de balances</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Nueva sección de preguntas -->
+        <div class="quiz-section">
+            <h2>Evaluación de Conocimientos</h2>
+            <form>
+                <!-- Pregunta 1: Opción múltiple -->
+                <div class="quiz-question">
+                    <p><strong>Pregunta 1:</strong> ¿Cuál de los siguientes es un principio contable fundamental?</p>
+                    <label><input type="radio" name="pregunta1" value="a"> Consistencia</label>
+                    <label><input type="radio" name="pregunta1" value="b"> Materialidad</label>
+                    <label><input type="radio" name="pregunta1" value="c"> Revelación</label>
+                </div>
+
+                <!-- Pregunta 2: Opción múltiple -->
+                <div class="quiz-question">
+                    <p><strong>Pregunta 2:</strong> ¿Qué proceso es esencial para la validación de estados financieros?
+                    </p>
+                    <label><input type="radio" name="pregunta2" value="a"> Auditoría interna</label>
+                    <label><input type="radio" name="pregunta2" value="b"> Conciliación bancaria</label>
+                    <label><input type="radio" name="pregunta2" value="c"> Ambas opciones</label>
+                </div>
+
+                <!-- Pregunta 3: Abierta -->
+                <div class="quiz-question">
+                    <p><strong>Pregunta 3:</strong> Describe brevemente la importancia de la conciliación bancaria.</p>
+                    <textarea name="pregunta3" rows="3" placeholder="Tu respuesta..."></textarea>
+                </div>
+
+                <!-- Pregunta 4: Abierta -->
+                <div class="quiz-question">
+                    <p><strong>Pregunta 4:</strong> ¿Cuál es el rol del sistema contable en la gestión empresarial?</p>
+                    <textarea name="pregunta4" rows="3" placeholder="Tu respuesta..."></textarea>
+                </div>
+
+                <!-- Pregunta 5: Abierta -->
+                <div class="quiz-question">
+                    <p><strong>Pregunta 5:</strong> Menciona dos normativas corporativas relevantes en el ámbito
+                        contable.</p>
+                    <textarea name="pregunta5" rows="3" placeholder="Tu respuesta..."></textarea>
+                </div>
+
+                <button type="submit">Enviar Respuestas</button>
+            </form>
+        </div>
+
+        <div class="training-header">
+            <a href="learning.html" class="back-button"><i class="fas fa-arrow-left"></i> Volver a Learning</a>
+        </div>
+    </div>
+</body>
+
+</html>

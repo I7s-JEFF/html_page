@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUTOPSA || Learning</title>
+    <style>
+        :root {
+            --primary: #e63946;
+            --secondary: #1d3557;
+            --accent: #2a9d8f;
+            --light: #f1faee;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(rgba(29, 53, 87, 0.9), rgba(41, 157, 143, 0.8)),
+                url('https://static.vecteezy.com/system/resources/previews/016/828/094/non_2x/topographic-map-abstract-background-with-lines-and-circles-mountain-contour-lines-in-gold-terrain-topographic-map-black-and-gold-free-vector.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            color: #333;
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .learning-container {
+            max-width: 800px;
+            width: 100%;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .learning-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--light);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            margin-bottom: 2rem;
+        }
+
+        .button-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .learning-button {
+            background: linear-gradient(135deg, var(--secondary), var(--primary));
+            color: white;
+            padding: 2rem;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 1.5rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            min-height: 150px;
+        }
+
+        .learning-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+        }
+
+        .back-button {
+            margin-top: 2rem;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            padding: 1rem 2rem;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: white;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .back-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(135deg, var(--secondary), var(--primary));
+        }
+
+        @media (max-width: 768px) {
+            .learning-title {
+                font-size: 2rem;
+            }
+
+            .learning-button {
+                font-size: 1.2rem;
+                padding: 1.5rem;
+                min-height: 120px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="learning-container">
+        <h1 class="learning-title">LUTOPSA LEARNING</h1>
+        <div class="button-grid">
+            <!-- Botón de Contabilidad -->
+            <a href="contabilidad.html" class="learning-button">CONTABILIDAD</a>
+            <!-- Botón de Marketing -->
+            <a href="marketing.html" class="learning-button">MARKETING</a>
+            <!-- Botón de Gerencia -->
+            <a href="gerencia.html" class="learning-button">GERENCIA</a>
+        </div>
+        <!-- Botón para volver al index -->
+        <a href="index.html" class="back-button">VOLVER A NOTICIAS</a>
+    </div>
+</body>
+
+</html>
